@@ -22,22 +22,27 @@ return [0, 1].
 
 ##### C :
 1. Simply two embedded for loops, easiest solution.  
-**Complexity:** n^2.  
+**Time Complexity:** n^2.  
 **Runtime:** 220 ms.  
 **Memory:** 7.6 MB.
 
 2. Searches for an element in an array after determining a 
 targetted number. Attempt to modify the quicksort algorithm 
 in order to optimize the target searching operation.  
-**Complexity:** n^2 log n.  
+**Time Complexity:** n^2 log n.  
 **Runtime:** 208 ms.  
 **Memory:** 7.8 MB.
 
 ##### Python :
 1. Searches for an element in an array after determining a 
 targetted number.   
-**Runtime:** 772 ms.
-**Memory:** 13.6 MB.
+**Runtime:** 772 ms.  
+**Memory:** 13.6 MB.  
+2. Stores elements into a hash table with their indexes then 
+searches for the complement into the hash table.
+**Time Complexity:** 2n.  
+**Runtime:** 36 ms.  
+**Memory:** 14.9 MB.  
 
 
 _Notes:_ 
