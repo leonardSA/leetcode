@@ -33,13 +33,20 @@ in order to optimize the target searching operation.
 **Runtime:** 208 ms.  
 **Memory:** 7.8 MB.
 
+3. Stores elements into a hash table with their indexes. This 
+hash table stores them as nodes in order to chain them if there 
+are collisions (a.k.a. closed addressing).  
+**Runtime:** 4 ms.    
+**Memory:** 8.8 MB.  
+
 ##### Python :
 1. Searches for an element in an array after determining a 
 targetted number.   
 **Runtime:** 772 ms.  
 **Memory:** 13.6 MB.  
+
 2. Stores elements into a hash table with their indexes then 
-searches for the complement into the hash table.
+searches for the complement into the hash table.  
 **Time Complexity:** 2n.  
 **Runtime:** 36 ms.  
 **Memory:** 14.9 MB.  
