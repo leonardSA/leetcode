@@ -21,7 +21,11 @@ Explanation: 342 + 465 = 807.
 
 ##### C :
 
-No solution yet.  
+1. Parses the two ListNodes creating a new ListNode using a carry like in a half-adder.  
+**Time complexity:** n.  
+**Runtime:** 24 ms.  
+**Memory:** 9.1 MB.  
+
 
 ##### Python :
 1. Parses the two ListNodes creating a new ListNode using a carry like in a half-adder.  
