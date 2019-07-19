@@ -27,6 +27,12 @@ Explanation: 342 + 465 = 807.
 **Memory:** 9.1 MB.  
 
 
+2. Same as first solution but with revisited conditions.
+**Time complexity:** n.  
+**Runtime:** 16 ms.  
+**Memory:** 8.9 MB.  
+
+
 ##### Python :
 1. Parses the two ListNodes creating a new ListNode using a carry like in a half-adder.  
 **Time complexity:** n.  
