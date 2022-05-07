@@ -1,4 +1,8 @@
+# compiled
+bin
+
 # C extensions
+*.o
 *.so
 
 # vim
