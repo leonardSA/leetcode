@@ -55,6 +55,11 @@ void ArgumentArray_free(struct ArgumentArray* argArray) {
 }
 
 
+const size_t ArgumentArray_len(struct ArgumentArray* argArray) {
+    return argArray->size;
+}
+
+
 //*******************************
 // PRIVATE FUNCTION IMPLEMENTATION
 //*******************************

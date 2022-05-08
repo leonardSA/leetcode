@@ -43,6 +43,16 @@ void ArgumentArray_free(struct ArgumentArray* argArray);
 
 
 /**
+ * @brief Returns number of elements in array.
+ *
+ * @param argArray
+ *
+ * @return length of array.
+ */
+const size_t ArgumentArray_len(struct ArgumentArray* argArray);
+
+
+/**
  * @brief Converts array of int as string to array of int stored in ArgumentArray.
  *
  * @param argArray  structure to store array
