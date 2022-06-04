@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include <stdbool.h>
+#include <ctype.h>
 
 #define ARRAY_OPEN_TOKEN        ('[')
 #define ARRAY_CLOSE_TOKEN       (']')

@@ -23,6 +23,11 @@ int* ArgumentArray_toIntArray(struct ArgumentArray* argArray, char* string) {
     string[0]                  = ' ';  // remove ARRAY_OPEN_TOKEN
     string[strlen(string) - 1] = ' ';  // remove ARRAY_CLOSE_TOKEN
 
+    // skip blanks
+    bool blank = true;      
+    for (unsigned i = 0U ; i < strlen(string) - 1U ; i++) { blank &= isblank(string[i]); }
+    if  (blank) return NULL;
+
     char* context = NULL;
     for (
             char* token = strtok_r(string, ARRAY_DELIMITER_TOKEN, &context) ; 
@@ -30,8 +35,8 @@ int* ArgumentArray_toIntArray(struct ArgumentArray* argArray, char* string) {
             token = strtok_r(NULL, ARRAY_DELIMITER_TOKEN, &context)
         )
     {
-        if (ARRAY_INITIAL_CAPACITY >= argArray->size) { ArgumentArray_resize(argArray); } // increase capacity
-        ((int*) argArray->array)[argArray->size++] = atoi(token);                         // insert and increment size
+        if (argArray->capacity <= argArray->size) { ArgumentArray_resize(argArray); } // increase capacity
+        ((int*) argArray->array)[argArray->size++] = atoi(token);                     // insert and increment size
     }
 
     return ((int*) argArray->array);
@@ -42,7 +47,7 @@ struct ArgumentArray* ArgumentArray_new(const size_t typeSize) {
     struct ArgumentArray* argArray = (struct ArgumentArray*) malloc(sizeof(struct ArgumentArray));
     assert(argArray && "Allocation of ArgumentArray failed");
     argArray->array    = (void*) malloc(typeSize * ARRAY_INITIAL_CAPACITY);
-    argArray->size     = 0;
+    argArray->size     = 0U;
     argArray->capacity = ARRAY_INITIAL_CAPACITY;
     argArray->typeSize = typeSize;
     return argArray;
